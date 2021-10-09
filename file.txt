@@ -1,0 +1,5 @@
+git clone https://github.com/Abungo/evo_device_realme_X2 -b main device/realme/X2
+git clone https://github.com/Abungo/evo_vendor_realme_X2 -b main vendor/realme/X2
+git clone https://github.com/Abungo/evo_kernel_realme_sm6150 -b main kernel/realme/sm6150
+git clone https://github.com/Abungo/packages_apps_Settings -b elle packages/apps/Settings
+git clone https://github.com/Abungo/frameworks_base -b elle frameworks/base
