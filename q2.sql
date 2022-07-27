@@ -15,3 +15,18 @@ insert into item values(&itemno,&unitprice);
 insert into order_item values(&orderno,&itemno,&quantity);
 insert into warehouse values(&warehouseno,'&city');
 insert into shipment values(&orderno,&warehouseno,'&ship_date');
+
+
+SQL> select c.custno,count(*) as No_of_orders,avg(o.ord_amt) as Avg_order_amount from customer c,order1 o where o.custno=c.custno group by c.custno;
+
+4.
+
+SQL> select distinct s.orderno from shipment s where not exists((select warehouseno from warehouse where city='Bangalore') minus (select w.warehouseno from shipment w where w.orderno=s.orderno))and exists ( select warehouseno from warehouse where city='Bangalore');
+
+                                        OR
+
+SQL> select s.orderno from shipment s,warehouse w where s.warehouseno=w.warehouseno and w.city='Bangalore' group by orderno having count(*)=(select count(*) from warehouse where city='Bangalore') and not(count(*)=0);
+
+5.
+
+SQL> delete from item where itemno=3;
