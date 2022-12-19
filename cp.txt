@@ -30,3 +30,4 @@ cd romname
 
 git config –global user.email “abungothokchom@gmail.com” && git config –global user.name “Abungo”
 
+https://us02web.zoom.us/j/89857733778?pwd=UXd4SVlGSjdrdjhncXJ5cGNOUG1nZz09
